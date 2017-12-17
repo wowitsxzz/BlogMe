@@ -1,0 +1,51 @@
+/* 下划菜单设置 */
+	ul.menu {
+		list-style-type: none;
+		margin: 0;
+		padding: 10;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	.menu li {
+		float: left;
+	}
+
+	.menu li a, .dropbtn {
+		display: inline-block;
+		color: #EEEEEE/*#2D1C12*/;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	.menu li a:hover, .dropdown:hover .dropbtn {
+		background-color: #A97F80;
+	}
+
+	.menu .dropdown {
+		display: inline-block;
+	}
+
+	.menu .dropdown-content {
+		display: none;
+		/*position: absolute;*/
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}
+
+	.menu .dropdown-content a {
+		color: #2D1C12;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+	}
+
+	.menu .dropdown-content a:hover {background-color: #f1f1f1}
+
+	.menu .dropdown:hover .dropdown-content {
+		display: block;
+	}

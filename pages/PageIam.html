@@ -5,14 +5,26 @@
 
 <head>
 	<meta charset="utf-8">
+
+<!-- menu-format -->
+	<link rel="stylesheet" type="text/css" href="../style/menu.css">
+
 	<style>
 
-	body {
-		background-image: url('assets/bg-img.jpg');
-		background-repeat: repeat;
+	html {
+	   	height: 100%;
+	   	box-sizing:border-box;
 	}
 
 	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+
+	.container {
+		/*width: calc(100vw);*/
+		height: calc(100vh - 72px);
+		width: 100%;
+		margin-top: 50px;
+	}
+
 /*初始化
 body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
 td,th,caption { font-size:14px; }
@@ -35,81 +47,9 @@ html {overflow-y: scroll;}
 		padding: 20px;
 	}
 
-	div.pagetitle-sentence {
+	div.pagesubtitle {
 		text-align: center;
 		padding: 5px;
-	}
-
-/* 下划菜单设置 */
-	ul.menu {
-		list-style-type: none;
-		margin: 0;
-		padding: 10;
-		overflow: hidden;
-		position: fixed;
-		top: 0;
-		width: 100%;
-	}
-
-	.menu li {
-		float: left;
-	}
-
-	.menu li a, .dropbtn {
-		display: inline-block;
-		color: #EEEEEE/*#2D1C12*/;
-		text-align: center;
-		padding: 14px 16px;
-		text-decoration: none;
-	}
-
-	.menu li a:hover, .dropdown:hover .dropbtn {
-		background-color: #A97F80;
-	}
-
-	.menu .dropdown {
-		display: inline-block;
-	}
-
-	.menu .dropdown-content {
-		display: none;
-		position: absolute;
-		background-color: #f9f9f9;
-		min-width: 160px;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	}
-
-	.menu .dropdown-content a {
-		color: #2D1C12;
-		padding: 12px 16px;
-		text-decoration: none;
-		display: block;
-	}
-
-	.menu .dropdown-content a:hover {background-color: #f1f1f1}
-
-	.menu .dropdown:hover .dropdown-content {
-		display: block;
-	}
-
-	.menu .dropdown:hover .dropdown-content {
-		display: block;
-	}
-
-/*按钮*/
-	div.buttom {
-		display: block;
-		font-weight: bold;
-		color: #FFFFFF;
-		border-style: solid;
-		width: 100px;
-		text-align: center;
-		padding: 5px;
-		text-decoration: none;
-	}
-
-	div.buttom:hover {
-		background-color: #4E4B56;
 	}
 
 /*内容展示*/
@@ -190,14 +130,14 @@ div.outsidebox {
 <body>	
 
 <!--horizontal menu + dropdown-->
-	<ul class="menu">
+	<div class="menu">
   		<div class="dropdown">
-  		<a href="FrontPage.html" target="_top" class="dropbtn">Hey</a>
+  		<a href="Home.html" target="_top" class="menu-common drop-button">Hey</a>
   		</div>
 
   		<div class="dropdown">
-  			<a href="PageIam.html" target="_top" class="dropbtn">I am</a>
-  			<div class="dropdown-content">
+  			<a href="PageIam.html" target="_top" class="menu-common drop-button">I am</a>
+  			<div class="menu-common dropdown-content">
   				<a href="#">the</a>
   				<a href="#">only</a>
   				<a href="#">fariy</a>
@@ -205,8 +145,8 @@ div.outsidebox {
   		</div>
 
   		<div class="dropdown">
-			<a href="PageIread.html" target="_top" class="dropbtn">I read</a>
-    		<div class="dropdown-content">
+			<a href="PageIread.html" target="_top" class="menu-common drop-button">I read</a>
+    		<div class="menu-common dropdown-content">
       			<a href="#">tons</a>
       			<a href="#">of</a>
       			<a href="#">books</a>
@@ -214,8 +154,8 @@ div.outsidebox {
   		</div>
 
   		<div class="dropdown">
-			<a href="PageIwatch.html" target="_top" class="dropbtn">I watch</a>
-    		<div class="dropdown-content">
+			<a href="PageIwatch.html" target="_top" class="menu-common drop-button">I watch</a>
+    		<div class="menu-common dropdown-content">
       			<a href="#">countless</a>
       			<a href="#">diversifed</a>
       			<a href="#">movies</a>
@@ -223,8 +163,8 @@ div.outsidebox {
   		</div>
 
   		<div class="dropdown">
-			<a href="#Imade" class="dropbtn">I made</a>
-    		<div class="dropdown-content">
+			<a href="PageImade.html" target="_top" class="menu-common drop-button">I made</a>
+    		<div class="menu-common dropdown-content">
       			<a href="#">genius</a>
       			<a href="#">of</a>
       			<a href="#">handcraft</a>
@@ -232,8 +172,8 @@ div.outsidebox {
   		</div>
 
   		<div class="dropdown">
-			<a href="#Itravel" class="dropbtn">I travel</a>
-    		<div class="dropdown-content">
+			<a href="PageItravel.html" target="_top" class="menu-common drop-button">I travel</a>
+    		<div class="menu-common dropdown-content">
       			<a href="#">around</a>
       			<a href="#">the</a>
       			<a href="#">world</a>
@@ -241,8 +181,8 @@ div.outsidebox {
   		</div>
 
   		<div class="dropdown">
-			<a href="#Iwant" class="dropbtn">I want</a>
-    		<div class="dropdown-content">
+			<a href="PageIwant.html" target="_top" class="menu-common drop-button">I want</a>
+    		<div class="menu-common dropdown-content">
       			<a href="#">money</a>
       			<a href="#">to</a>
       			<a href="#">burn</a>
@@ -250,19 +190,18 @@ div.outsidebox {
   		</div>
 
   		<div class="dropdown">
-			<a href="#So" class="dropbtn">So</a>
-    		<div class="dropdown-content">
+			<a href="PageSo.html" target="_top" class="menu-common drop-button">So</a>
+    		<div class="menu-common dropdown-content">
       			<a href="#">contact</a>
       			<a href="#">me</a>
     		</div>
   		</div>
 
-	</ul>
+	</div>
 
 <!--PageIam-->
 <a name="Iam">
-	<div style="padding: 30px; margin-top: 50px; background-color: #eeeeee;">
-	<div class="outsidebox">
+	<div class="container" style="background-color: #FFF">
 		<p>
 		<img src="https://assets.strikingly.com/static/icons/delicate/59.png" align="left">
 		</p>		
@@ -278,7 +217,6 @@ div.outsidebox {
 			LuLu tucked me sleep. #emmm...in fact he bites me.#<br>
 			</p>
 		</div>
-	</div>
 	</div>
 </a>
 
