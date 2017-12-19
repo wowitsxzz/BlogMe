@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<title>I read</title>
-	<body style="background-color: #4E4B56;">
+<!-- 	<body style="background-color: #4E4B56;"> -->
 
 <head>
 	<meta charset="utf-8">
@@ -9,11 +9,14 @@
 <!-- menu-format -->
 	<link rel="stylesheet" type="text/css" href="../style/menu.css">
 
+<!-- container -->
+  <link rel="stylesheet" type="text/css" href="../style/container.css">
+
 <!-- page-title -->
 	<link rel="stylesheet" type="text/css" href="../style/pagetitle.css">
 
 <!-- card-gallary -->
-	<link rel="stylesheet" type="text/css" href="../style/card-gallary.css">
+  <link rel="stylesheet" type="text/css" href="../style/card-gallary.css">
 
 <!-- card -->
 	<link rel="stylesheet" type="text/css" href="../style/card.css">
@@ -28,14 +31,13 @@
 	   	box-sizing:border-box;
 	}
 
+  body {
+    background-color:#4E4B56; 
+    box-sizing:border-box;
+  }
+
 	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
 
-	.container {
-		/*width: calc(100vw);*/
-		height: calc(100vh - 72px);
-		width: 100%;
-		margin-top: 50px;
-	}
 
 /*初始化
 body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
@@ -132,13 +134,13 @@ html {overflow-y: scroll;}
 	<div class="container" style="background-color: #868DA0;">
 
 <!-- page-title -->
-	<div class="pagetitle">
+	<div class="pagetitle" style="color: #FFF;">
 		<h1>Books</h1>
 		<h2>Views around the world.</h2>
 	</div>
 
 <!-- MainBody -->
-	<div>
+	<div class="card-gallary">
 
 		<div class="card">
   			<img src="../assets/booklist/jieyouzahuopu.jpg" alt="jieyouzahuopu" style="width:100%">

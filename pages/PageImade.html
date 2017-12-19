@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-	<title>I am</title>
-	<body style="background-color: #4E4B56;">
+	<title>I made</title>
+	<!-- <body style="background-color: #4E4B56;"> -->
 
 <head>
 	<meta charset="utf-8">
@@ -15,45 +15,34 @@
 <!-- page-title -->
 	<link rel="stylesheet" type="text/css" href="../style/pagetitle.css">
 
-<!-- card-gallary -->
-  <link rel="stylesheet" type="text/css" href="../style/card-gallary.css">
+<!-- card -->
+	<link rel="stylesheet" type="text/css" href="../style/card.css">
 
-<!-- travel-location-card -->
-	<link rel="stylesheet" type="text/css" href="../style/travel-location-card.css">
+<!-- card-gallary -->
+	<link rel="stylesheet" type="text/css" href="../style/card-gallary.css">
 
 <!-- footer -->
 	<link rel="stylesheet" type="text/css" href="../style/footer.css">
 
 <style>
-
-	html {
+	
+html {
 	   	height: 100%;
 	   	box-sizing:border-box;
 	}
 
+  body {
+    background-color: #4E4B56; 
+    box-sizing:border-box;
+  }
+
 	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
 
 
-/*初始化
-body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
-td,th,caption { font-size:14px; }
-address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
-a { color:#555; text-decoration:none; }
-a:hover { text-decoration:none; }
-img { border:none; }
-ol,ul,li { list-style:none; }
-input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
-table { border-collapse:collapse; }
-html {overflow-y: scroll;} 
-
-.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
-.clearfix { *zoom:1; }
-*/
-
 </style>
-</head>
 
-<body>	
+</head>
+<body>
 
 <!--horizontal menu + dropdown-->
 	<div class="menu">
@@ -125,37 +114,59 @@ html {overflow-y: scroll;}
 
 	</div>
 
-<!--Main-->
-	<div class="container" style="background-color: #FFF">
+<!-- main -->
+	<div class="container" style="background-color: #FFF;">
 
-	<!-- <div class="card-gallary" style="display: flex; flex-direction: column; align-items: center; justify-content: center;"> -->
-	<div class="card-gallary" style="display: flex; align-items: center; justify-content: center;">
-
-      <div>
-        <img src="https://assets.strikingly.com/static/icons/delicate/59.png" alt="earth-pic" style="width: 100%">
-      </div>
-
-      <div style="padding: 20px; border-style: dotted; border-width: 1px; text-align: left;"">
-			<h1>eh</h1>
-			<p>
-			Books grow me up.<br>
-			Movie is the air.<br>
-			Milk keeps me alive.<br>
-			Coffee is blood.<br>
-			Handcraft fills the room.<br>
-			Dairy records moments.<br>
-			LuLu tucked me sleep. #emmm...in fact he bites me.#<br>
-			</p>
-      </div>
-
-	</div>
-	
+<!-- page-title -->
+	<div class="pagetitle" style="color: #2D1C12">
+		<h1>HandCraft</h1>
+		<h2>Everything made by hands.</h2>
 	</div>
 
+<!-- MainBody -->
+	<div class="card-gallary">
+
+		<div class="card">
+  			<img src="../assets/handcraft/hobo.jpg" alt="hobo" style="width:100%">
+  				<div class="card-container">
+    				<h4>Hobo</h4>
+    				<p>手帐</p>
+  				</div>
+		</div>
+
+		<div class="card">
+  			<img src="../assets/handcraft/handmaketools.jpg" alt="handmaketools" style="width:100%">
+  				<div class="card-container">
+    				<h4>Rubber Stamp</h4>
+    				<p>橡皮章</p>
+  				</div>
+		</div>
+
+		<div class="card">
+  			<img src="../assets/handcraft/perler.jpg" alt="perler" style="width:100%">
+  				<div class="card-container">
+    				<h4>Perler Beads</h4>
+    				<p>拼豆</p>  					
+  				</div>
+		</div>
+
+		<div class="card">
+  			<img src="../assets/handcraft/makeup.jpg" alt="makeup" style="width:100%">
+  				<div class="card-container">
+    				<h4>Makeup</h4>
+    				<p>化妆</p>   					
+  				</div>
+		</div>
+
+	</div>
+
+	</div>
 
 <!--Footer-->
-	<div id="footer" style="background-color: white; color: #2D1C12; text-align: center; padding: 3px; position: fixed; bottom: 0; width: 100%; ">
+	<div class="footer">
 	<p>Copyright @ lovingcodingのzx</p>	
+	</div>
+
 	</div>
 
 </body>

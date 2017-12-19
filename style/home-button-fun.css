@@ -1,10 +1,10 @@
-.button {
+.button-fun {
 		display: block;
 /*		font-weight: bold;*/
 		color: #FFFFFF;
 		border-style: solid;
 		height: 50px;
-		width: 100px;
+		width: 120px;
 		text-align: center;
 		padding: 5px;
 		text-decoration: none;
@@ -13,6 +13,6 @@
 		justify-content: center;
 	}
 
-	.button:hover {
-		background-color: #4E4B56;
+.button-fun:hover {
+		background-color: #a97f80fc;
 	}

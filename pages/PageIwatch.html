@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<title>I watch</title>
-	<body style="background-color: #4E4B56;">
+	<!-- <body style="background-color: #4E4B56;"> -->
 
 <head>
 	<meta charset="utf-8">
@@ -9,11 +9,14 @@
 <!-- menu-format -->
 	<link rel="stylesheet" type="text/css" href="../style/menu.css">
 
+<!-- container -->
+  <link rel="stylesheet" type="text/css" href="../style/container.css">
+
 <!-- page-title -->
 	<link rel="stylesheet" type="text/css" href="../style/pagetitle.css">
 
 <!-- card-gallary -->
-	<link rel="stylesheet" type="text/css" href="../style/card-gallary.css">
+  <link rel="stylesheet" type="text/css" href="../style/card-gallary.css">
 
 <!-- card -->
 	<link rel="stylesheet" type="text/css" href="../style/card.css">
@@ -23,19 +26,19 @@
 
 	<style>
 
-html {
-	   	height: 100%;
+  html {
+	   	height: calc(100vh - 72px);
 	   	box-sizing:border-box;
 	}
 
+  body {
+    background-color: #4E4B56; 
+    box-sizing:border-box;
+  }
+
+
 	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
 
-	.container {
-		/*width: calc(100vw);*/
-		height: calc(100vh - 72px);
-		width: 100%;
-		margin-top: 50px;
-	}
 
 	</style>
 	
@@ -114,37 +117,106 @@ html {
 	</div>
 
 <!--Main-->
-	<div class="container" style="background-color: #868DA0;">
+	<div class="container" style="background-color: #A97F80;">
 
 <!-- page-title -->
-	<div class="pagetitle">
+	<div class="pagetitle" style="color: #2D1C12">
 		<h1>Movies</h1>
 		<h2>Life is drama, verse verse.</h2>
 	</div>
 
 <!-- MainBody -->
-	<div>
+	<div class="card-gallary">
 
 		<div class="card">
   			<img src="../assets/movielist/coco_poster.jpg" alt="coco" style="width:100%">
   				<div class="card-container">
-    				<h4>寻梦环游记</h4> 
+    				<h4>寻梦环游记<br>
+                2017
+            </h4> 
   				</div>
 		</div>
 
 		<div class="card">
   			<img src="../assets/movielist/murder_on_the_orient_express_poster.jpg" alt="merder_on_the_orient_express" style="width:100%">
   				<div class="card-container">
-    				<h4>东方快车谋杀案</h4> 
+    				<h4>东方快车谋杀案<br>
+                2017
+            </h4> 
   				</div>
 		</div>
 
 		<div class="card">
   			<img src="../assets/movielist/paddington_bear_poster.jpg" alt="paddington_bear1" style="width:100%">
   				<div class="card-container">
-    				<h4>帕丁顿熊1</h4>   					
+    				<h4>帕丁顿熊1<br>
+                2014
+            </h4>   					
   				</div>
 		</div>
+
+    <div class="card">
+        <img src="../assets/movielist/room_poster.jpg" alt="room" style="width:100%">
+          <div class="card-container">
+            <h4>房间<br>
+                2015
+            </h4>            
+          </div>
+    </div>
+
+    <div class="card">
+        <img src="../assets/movielist/brooklyn_poster.jpg" alt="brooklyn" style="width:100%">
+          <div class="card-container">
+            <h4>布鲁克林<br>
+                2015
+            </h4>            
+          </div>
+    </div>
+
+    <div class="card">
+        <img src="../assets/movielist/butterfly_effect_poster.jpg" alt="butterfly_effect" style="width:100%">
+          <div class="card-container">
+            <h4>蝴蝶效应<br>
+                2004
+            </h4>            
+          </div>
+    </div>
+
+    <div class="card">
+        <img src="../assets/movielist/avatar_poster.jpg" alt="avatar_effect" style="width:100%">
+          <div class="card-container">
+            <h4>阿凡达<br>
+                2009
+            </h4>            
+          </div>
+    </div>
+
+    <div class="card">
+        <img src="../assets/movielist/cinderella_poster.jpg" alt="cinderella_effect" style="width:100%">
+          <div class="card-container">
+            <h4>灰姑娘<br>
+                2015
+            </h4>            
+          </div>
+    </div>
+
+    <div class="card">
+        <img src="../assets/movielist/beauty_and_the_beast_poster.jpg" alt="beauty_and_the_beast" style="width:100%">
+          <div class="card-container">
+            <h4>美女与野兽<br>
+                2017
+            </h4>            
+          </div>
+    </div>
+
+    <div class="card">
+        <img src="../assets/movielist/interstellar_poster.jpg" alt="interstellar" style="width:100%">
+          <div class="card-container">
+            <h4>星际穿越<br>
+                2014
+            </h4>            
+          </div>
+    </div>
 
 	</div>
 

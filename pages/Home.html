@@ -9,8 +9,17 @@
 <!-- menu-format -->
 	<link rel="stylesheet" type="text/css" href="../style/menu.css">
 
+<!-- container -->
+  <link rel="stylesheet" type="text/css" href="..style/container.css">
+
+<!-- page-title -->
+	<link rel="stylesheet" type="text/css" href="../style/pagetitle.css">
+
 <!-- one-button -->
 	<link rel="stylesheet" type="text/css" href="../style/home-button.css">
+
+<!-- fun-buttons -->
+	<link rel="stylesheet" type="text/css" href="../style/home-button-fun.css">
 
 <!-- card-presenting -->
 	<link rel="stylesheet" type="text/css" href="../style/card.css">
@@ -33,6 +42,7 @@
 	}
 
 	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0;box-sizing:border-box; }
+
 /*初始化
 body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
 td,th,caption { font-size:14px; }
@@ -48,55 +58,6 @@ html {overflow-y: scroll;}
 .clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
 .clearfix { *zoom:1; }
 */
-
-/*内容展示*/
-div.outsidebox {
-		width: 1000px; 
-		margin: 20px auto; 
-		opacity: 0%;
-		text-align: center;
-	}
-
-/*travelcard*/
-	div.place {
-		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-		transition: 0.3s;
-		width: 200px;
-		height: 130px;
-		border-radius: 5px;
-		margin: 20px;
-		display: inline-block;
-		vertical-align: top;
-	}
-
-	div.place:hover {
-		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	}
-
-	div.place img {
-		border-radius: 5px;
-		height: 100%;
-	}
-
-	div.introduction {
-		background-color: #eeeeee;
-		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-		transition: 0.3s;
-		width: 500px;
-		height: 130px;
-		border-radius: 5px;
-		margin: 20px;
-		display: inline-block;
-		vertical-align: top;
-	}
-
-	div.introduction:hover {
-		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-	}
-
-	div.introduction img {
-		border-radius: 5px 5px 0 0;
-	}
 
 	</style>
 </head>
@@ -173,40 +134,111 @@ div.outsidebox {
 
 	</div>
 
-<!--Home-->
-	<div style="padding: 30px; margin-top: 50px; /*background-color: #D0AAA7;*/">		
-	<div class="outsidebox">
-		<ul style="list-style-type: none; color: #EEEEEE">
-		<li>
-		<div style="float: right; text-align: right;">
-			<h1>QUE SERA SERA</h1>
-			<p>
-			When I was just a little girl,<br>
-			I asked my mother: what will I be?<br>
-			Will I be pretty? Will I be rich?<br>
-			</p>
-			<p>
-			Here is what she said to me:<br>
-			Que sera sera, whatever will be, will be.<br>
-			The future is not us to see, que sera sera.<br>
-			</p>
-			<p>
-			What will be, will be.
-			</p>
-		</div>
-		</li>
+<!-- main -->
+<div class="container">
 
-		<li>
-		<div class="responsive">
-			<div class="buttom" style="margin: 100px 0px 100px 600px; float: right;">
-				<a href="KnowingMe.html" target="_top" style="text-decoration: none; color: #EEEEEE">Knowing Me</a>
-			</div>
-		</div>
-		</li>
+<!--leading-reading-->
+	<div class="pagetitle" style="margin-right: 50px; color: #FFF">
+		<h1 style="text-align: right;">QUE SERA SERA</h1>
+	</div>
 
-		</ul>
+	<div style="padding: 30px; margin-right: 50px; height: calc(100vh - 177px">
+
+<!-- content -->		
+		<div style="text-align: right; color: #FFF;">
+		<p>
+		When I was just a little girl,<br>
+		I asked my mother: what will I be?<br>
+		Will I be pretty? Will I be rich?<br>
+		</p>
+		<p>
+		Here is what she said to me:<br>
+		Que sera sera, whatever will be, will be.<br>
+		The future is not us to see, que sera sera.<br>
+		</p>
+		<p>
+		What will be, will be.
+		</p>
+		</div>
+
+		<div class="button" style="float: right; margin-top: 50px;">
+			<a href="KnowingMe.html" target="_top" style="text-decoration: none; color: #FFF;">Knowing Me</a>			
+		</div>
+
+		<div style="/*float: right; */padding: 5px; margin-top: 50px;">
+
+
+<!-- welcome alert -->
+			<!-- <input id="visiter" type="text"> -->
+			<button onclick="wwFunction()" style="padding: 1px">问你个事</button>
+			<!-- <div class="button-fun" onclick="wwFunction()">问你个事</div> -->
+			<p id="wc" style="color: #FFF"></p>
+			<script>
+			function wwFunction(){
+				var x;
+				var person=prompt("诶？你是？","猪");
+				if (person!=null && person!=""){
+					x="那么" + person + "，偷看我网站的感觉如何?";
+					document.getElementById("wc").innerHTML=x;
+				}
+				else if (person == null){					
+					document.getElementById("wc").innerHTML='咋了？问下不行吗';
+				}
+			}
+			</script>
+
+<!-- time -->
+			<button onclick="getElementById('current-time').innerHTML=Date()" style="padding: 1px">知道几点了吗</button>
+			<!-- <div class="button-fun" onclick="getElementById('current-time').innerHTML=Date()">知道几点了吗</div> -->
+			<p id="current-time" style="color: #FFF"></p>
+
+<!-- surprise -->
+			<button onclick="axxFunction()" style="padding: 1px">你说什么？</button>
+			<!-- <div class="button-fun" onclick="axxFunction()">你说什么？</button> -->
+			<p id="xx" style="color: #FFF"></p>
+			<script>
+			function axxFunction(){
+				var x;
+				var r=confirm("zx是我见过的最爱学习的仙女");
+				if (r==true){
+					x="你说得对";
+				}
+				else{
+					x="你是猪!";
+				}
+				document.getElementById("xx").innerHTML=x;
+				}
+			</script>
+
+<!-- time/money-counting -->
+			<script>
+				var c=0;
+				var t;
+				var timer_is_on=0;
+				function timedCount(){
+					document.getElementById('txt').value=c;
+					c=c+1;
+					t=setTimeout("timedCount()",1000);
+				}
+				function doTimer(){
+					if (!timer_is_on){
+						timer_is_on=1;
+						timedCount();
+					}
+				}
+			</script>
+			<form>
+				<input type="button" value="点我把" onClick="doTimer()">
+				<input type="text" id="txt">
+			</form>
+			<p style="color: #FFF">RMB给zx</p>		
+
+
+		</div>
+
 	</div>
-	</div>
+
+</div>
 
 <!--Footer-->
 	<div class="footer">

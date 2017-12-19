@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<title>I am</title>
+	<title>I travel</title>
 	<body style="background-color: #4E4B56;">
 
 <head>
@@ -19,12 +19,12 @@
   <link rel="stylesheet" type="text/css" href="../style/card-gallary.css">
 
 <!-- travel-location-card -->
-	<link rel="stylesheet" type="text/css" href="../style/travel-location-card.css">
+	<link rel="stylesheet" type="text/css" href="../style/travel-slides.css">
 
 <!-- footer -->
 	<link rel="stylesheet" type="text/css" href="../style/footer.css">
 
-<style>
+	<style>
 
 	html {
 	   	height: 100%;
@@ -50,7 +50,7 @@ html {overflow-y: scroll;}
 .clearfix { *zoom:1; }
 */
 
-</style>
+	</style>
 </head>
 
 <body>	
@@ -123,38 +123,96 @@ html {overflow-y: scroll;}
     		</div>
   		</div>
 
-	</div>
+	</div><!-- menu-end -->
 
 <!--Main-->
-	<div class="container" style="background-color: #FFF">
+	<div class="container" style="background-color: #FFF/*#2D1C12*/;">
 
-	<!-- <div class="card-gallary" style="display: flex; flex-direction: column; align-items: center; justify-content: center;"> -->
-	<div class="card-gallary" style="display: flex; align-items: center; justify-content: center;">
+<!-- page-title -->
+	<div class="pagetitle" style="color: #D0AAA7;">
+		<h1>Selected Advanture</h1>
+		<h2>Travel broadens life.</h2>
+	</div>
+<!-- page-title-end -->
 
-      <div>
-        <img src="https://assets.strikingly.com/static/icons/delicate/59.png" alt="earth-pic" style="width: 100%">
+  <div class="card-gallary"><!-- card-gallary -->
+
+
+    <div><!-- module1 -->
+      
+      <div class="slideshow-container"><!-- slide1 -->   
+        <img src="../assets/travellist/kuala-lumpur-petronas-twintowers.jpg" alt="kuala-lumpur-petronas-twintowers" style="width: 100%">   
+      </div><!-- slide1-end -->
+     
+      <div class="introduction"><!-- intro1 -->
+        <p>xxxxx</p>
+      </div><!-- intro1-end -->
+
+    </div><!-- module1-end -->
+
+    <div><!-- module2 -->
+      <!-- intro2 -->
+      <div class="introduction">
+        <p>xxxxx</p>
+      </div>
+     
+      <div class="slideshow-container"><!-- slide2 -->          
+        <img src="../assets/travellist/new-york-night-high-angle.jpg" alt="new-york-night-high-angle" style="width: 100%">
+      </div><!-- slide2-end -->
+
+    </div><!-- module2-end -->
+
+    <div><!-- module3 -->
+      
+      <div class="slideshow-container"><!-- slide3 -->
+        <img src="../assets/travellist/london-telephone.jpg" alt="london" style="width: 100%">
+      </div><!-- slide3-end -->
+
+      <!-- intro3 -->
+      <div class="introduction">
+        <p>xxxxx</p>
       </div>
 
-      <div style="padding: 20px; border-style: dotted; border-width: 1px; text-align: left;"">
-			<h1>eh</h1>
-			<p>
-			Books grow me up.<br>
-			Movie is the air.<br>
-			Milk keeps me alive.<br>
-			Coffee is blood.<br>
-			Handcraft fills the room.<br>
-			Dairy records moments.<br>
-			LuLu tucked me sleep. #emmm...in fact he bites me.#<br>
-			</p>
-      </div>
+    </div><!-- module3-end -->
 
-	</div>
-	
-	</div>
+	</div><!-- card-gallary-end -->
+	</div><!-- container-end -->
 
+<!-- main-end -->
+
+<script>
+  
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
 
 <!--Footer-->
-	<div id="footer" style="background-color: white; color: #2D1C12; text-align: center; padding: 3px; position: fixed; bottom: 0; width: 100%; ">
+	<div class="footer">
 	<p>Copyright @ lovingcodingのzx</p>	
 	</div>
 
