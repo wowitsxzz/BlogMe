@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<title>I want</title>
+<!-- 	<body style="background-color: #4E4B56;"> -->
+
+<head>
+	<meta charset="utf-8">
+
+<!-- initialization.css -->
+  <link rel="stylesheet" type="text/css" href="../style/initialization.css">
+
+<!-- menu-format -->
+	<link rel="stylesheet" type="text/css" href="../style/menu.css">
+
+<!-- container -->
+  <link rel="stylesheet" type="text/css" href="../style/container.css">
+
+<!-- content -->
+  <link rel="stylesheet" type="text/css" href="../style/content.css">
+
+<!-- page-title -->
+	<link rel="stylesheet" type="text/css" href="../style/pagetitle.css">
+
+<!-- one-button -->
+  <link rel="stylesheet" type="text/css" href="../style/button.css">
+
+<!-- card-gallary -->
+  <link rel="stylesheet" type="text/css" href="../style/card-gallary.css">
+
+<!-- card -->
+	<link rel="stylesheet" type="text/css" href="../style/card.css">
+
+<!-- footer -->
+	<link rel="stylesheet" type="text/css" href="../style/footer.css">
+
+<style>
+
+	html {
+	   	height: 100%;
+	   	box-sizing:border-box;
+	}
+
+  body {
+    background-color:#4E4B56; 
+    box-sizing:border-box;
+  }
+
+/*js*/
+
+#flip
+{
+  padding:5px;
+  text-align:center;
+}
+
+#panel
+{
+  padding:50px;
+  display:none;
+  text-align:center;
+}
+
+/*js-end*/
+
+</style>
+</head>
+
+<body>	
+
+<!--horizontal menu + dropdown-->
+	<div class="menu">
+  		<div class="dropdown">
+  		<a href="Home.html" target="_top" class="menu-common drop-button">Hey</a>
+  		</div>
+
+  		<div class="dropdown">
+  			<a href="PageIam.html" target="_top" class="menu-common drop-button">I am</a>
+  			<div class="menu-common dropdown-content">
+  				<a href="#">the</a>
+  				<a href="#">only</a>
+  				<a href="#">fariy</a>
+  			</div>
+  		</div>
+
+  		<div class="dropdown">
+			<a href="PageIread.html" target="_top" class="menu-common drop-button">I read</a>
+    		<div class="menu-common dropdown-content">
+      			<a href="#">tons</a>
+      			<a href="#">of</a>
+      			<a href="#">books</a>
+    		</div>
+  		</div>
+
+  		<div class="dropdown">
+			<a href="PageIwatch.html" target="_top" class="menu-common drop-button">I watch</a>
+    		<div class="menu-common dropdown-content">
+      			<a href="#">countless</a>
+      			<a href="#">diversifed</a>
+      			<a href="#">movies</a>
+    		</div>
+  		</div>
+
+  		<div class="dropdown">
+			<a href="PageImade.html" target="_top" class="menu-common drop-button">I made</a>
+    		<div class="menu-common dropdown-content">
+      			<a href="#">genius</a>
+      			<a href="#">of</a>
+      			<a href="#">handcraft</a>
+    		</div>
+  		</div>
+
+  		<div class="dropdown">
+			<a href="PageItravel.html" target="_top" class="menu-common drop-button">I travel</a>
+    		<div class="menu-common dropdown-content">
+      			<a href="#">around</a>
+      			<a href="#">the</a>
+      			<a href="#">world</a>
+    		</div>
+  		</div>
+
+  		<div class="dropdown">
+			<a href="PageIwant.html" target="_top" class="menu-common drop-button">I want</a>
+    		<div class="menu-common dropdown-content">
+      			<a href="#">money</a>
+      			<a href="#">to</a>
+      			<a href="#">burn</a>
+    		</div>
+  		</div>
+
+  		<div class="dropdown">
+			<a href="PageSo.html" target="_top" class="menu-common drop-button">So</a>
+    		<div class="menu-common dropdown-content">
+      			<a href="#">contact</a>
+      			<a href="#">me</a>
+    		</div>
+  		</div>
+
+	</div><!-- menu-end -->
+
+<!--main-->
+<div class="container" style="background-image: url('../assets/bgimg/euro-coins.jpg');">
+
+<!-- page-title -->
+  <div class="pagetitle" style="color: #FFF;">
+    <h1>Money</h1>
+    <h2>Money is something, but not everything. <!-- Money talks. --></h2>
+  </div>
+
+<!-- content -->
+<div class="content" style="justify-content: space-around;">
+
+  <div id="add-info">
+    <span v-bind:title="message">
+    <img src="../assets/other/heart.png" alt="heart-pic" style="width: 100%">
+    </span>
+  </div>
+
+  <script src="https://unpkg.com/vue"></script>
+<script>
+var app = new Vue({
+  el: '#add-info',
+  data: {
+    message: 'Hello!'
+  }
+})
+</script>
+
+  <div style="padding: 20px;">
+
+<!--     <div class="button" style="float: right; margin-top: 50px;">
+      <a href="KnowingMe.html" target="_top" style="text-decoration: none; color: #FFF;">Donating Me</a>     
+    </div> -->
+
+<div id="flip" class="button">Donating</div>
+<div id="panel" class="button">Pay 10kg cash.</div>
+
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+
+  </div>
+
+
+</div><!-- content-end -->
+</div><!-- main-end -->
+
+<!--Footer-->
+<div class="footer">
+	<p>Copyright @ lovingcodingのzx</p>	
+</div>
+
+</body>
+</html>

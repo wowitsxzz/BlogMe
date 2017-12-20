@@ -1,0 +1,18 @@
+.button {
+		display: block;
+		font-weight: bold;
+		color: #FFFFFF;
+		border-style: solid;
+		min-height: 50px;
+		min-width: 100px;
+		text-align: center;
+		padding: 5px;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+/*.button:hover {
+		background-color: #4E4B56;
+	}*/

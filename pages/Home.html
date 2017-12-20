@@ -6,20 +6,23 @@
 <head>
 	<meta charset="utf-8">
 
+<!-- initialization.css -->
+	<link rel="stylesheet" type="text/css" href="../style/initialization.css">
+
 <!-- menu-format -->
 	<link rel="stylesheet" type="text/css" href="../style/menu.css">
 
 <!-- container -->
-  <link rel="stylesheet" type="text/css" href="..style/container.css">
+  <link rel="stylesheet" type="text/css" href="../style/container.css">
 
 <!-- page-title -->
 	<link rel="stylesheet" type="text/css" href="../style/pagetitle.css">
 
 <!-- one-button -->
-	<link rel="stylesheet" type="text/css" href="../style/home-button.css">
+	<link rel="stylesheet" type="text/css" href="../style/button.css">
 
 <!-- fun-buttons -->
-	<link rel="stylesheet" type="text/css" href="../style/home-button-fun.css">
+	<link rel="stylesheet" type="text/css" href="../style/button-fun.css">
 
 <!-- card-presenting -->
 	<link rel="stylesheet" type="text/css" href="../style/card.css">
@@ -40,24 +43,6 @@
 		background-repeat: repeat;
 		box-sizing:border-box;
 	}
-
-	body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0;box-sizing:border-box; }
-
-/*初始化
-body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
-td,th,caption { font-size:14px; }
-address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
-a { color:#555; text-decoration:none; }
-a:hover { text-decoration:none; }
-img { border:none; }
-ol,ul,li { list-style:none; }
-input, textarea, select, button { font:14px Verdana,Helvetica,Arial,sans-serif; }
-table { border-collapse:collapse; }
-html {overflow-y: scroll;} 
-
-.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
-.clearfix { *zoom:1; }
-*/
 
 	</style>
 </head>
@@ -132,19 +117,19 @@ html {overflow-y: scroll;}
     		</div>
   		</div>
 
-	</div>
+	</div><!-- menu-end -->
 
 <!-- main -->
 <div class="container">
 
-<!--leading-reading-->
 	<div class="pagetitle" style="margin-right: 50px; color: #FFF">
 		<h1 style="text-align: right;">QUE SERA SERA</h1>
 	</div>
 
-	<div style="padding: 30px; margin-right: 50px; height: calc(100vh - 177px">
+<!-- song+buttons -->
+<div style="padding: 30px; margin-right: 50px; height: calc(100vh - 177px)">
 
-<!-- content -->		
+<!-- song -->		
 		<div style="text-align: right; color: #FFF;">
 		<p>
 		When I was just a little girl,<br>
@@ -160,18 +145,19 @@ html {overflow-y: scroll;}
 		What will be, will be.
 		</p>
 		</div>
+<!-- song-end -->
 
+		<!-- button -->
 		<div class="button" style="float: right; margin-top: 50px;">
 			<a href="KnowingMe.html" target="_top" style="text-decoration: none; color: #FFF;">Knowing Me</a>			
 		</div>
+		<!-- button-end -->
 
+		<!-- button-fun -->
 		<div style="/*float: right; */padding: 5px; margin-top: 50px;">
 
-
-<!-- welcome alert -->
-			<!-- <input id="visiter" type="text"> -->
+<!-- welcome-alert -->
 			<button onclick="wwFunction()" style="padding: 1px">问你个事</button>
-			<!-- <div class="button-fun" onclick="wwFunction()">问你个事</div> -->
 			<p id="wc" style="color: #FFF"></p>
 			<script>
 			function wwFunction(){
@@ -186,13 +172,15 @@ html {overflow-y: scroll;}
 				}
 			}
 			</script>
+<!-- welcome-alert-end -->
 
 <!-- time -->
 			<button onclick="getElementById('current-time').innerHTML=Date()" style="padding: 1px">知道几点了吗</button>
 			<!-- <div class="button-fun" onclick="getElementById('current-time').innerHTML=Date()">知道几点了吗</div> -->
 			<p id="current-time" style="color: #FFF"></p>
+<!-- time-end -->
 
-<!-- surprise -->
+<!-- say-what -->
 			<button onclick="axxFunction()" style="padding: 1px">你说什么？</button>
 			<!-- <div class="button-fun" onclick="axxFunction()">你说什么？</button> -->
 			<p id="xx" style="color: #FFF"></p>
@@ -209,8 +197,9 @@ html {overflow-y: scroll;}
 				document.getElementById("xx").innerHTML=x;
 				}
 			</script>
+<!-- say-what-end -->
 
-<!-- time/money-counting -->
+<!-- counting -->
 			<script>
 				var c=0;
 				var t;
@@ -231,14 +220,15 @@ html {overflow-y: scroll;}
 				<input type="button" value="点我把" onClick="doTimer()">
 				<input type="text" id="txt">
 			</form>
-			<p style="color: #FFF">RMB给zx</p>		
+			<p style="color: #FFF">RMB给zx</p>
+<!-- counting-end -->	
 
 
-		</div>
+		</div><!-- button-fun-end -->
 
-	</div>
+</div><!-- song+buttons-end -->
 
-</div>
+</div><!-- main-end -->
 
 <!--Footer-->
 	<div class="footer">
