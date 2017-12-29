@@ -33,13 +33,14 @@
 	<style>
 
 	html {
+	   	min-height: calc(100vh - 72px);
 	   	height: 100%;
 	   	box-sizing:border-box;
 	}
 
 /*galaxy-bg-only-home-page*/
 	body {
-		background-image: url('../assets/bgimg/bg-img-galaxy.jpg');
+		background-image: url('../assets/bgimg/bg-img-annie-spratt.jpg');
 		background-repeat: repeat;
 		box-sizing:border-box;
 	}
@@ -151,10 +152,29 @@
 		<div class="button" style="float: right; margin-top: 50px;">
 			<a href="KnowingMe.html" target="_top" style="text-decoration: none; color: #FFF;">Knowing Me</a>			
 		</div>
+
+<!-- onmouse -->
+			<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+			style="background-color: #FFF;
+			width: 180px;
+			height: 35px;
+			padding: 5px;
+			text-align: center;">Don't like me？</div>
+
+			<script>
+			function mOver(obj){
+				obj.innerHTML="Bite me!"
+			}
+			function mOut(obj){
+				obj.innerHTML="Oh you scared of me?"
+			}
+			</script>
+<!-- onmouse-end -->
+
 		<!-- button-end -->
 
 		<!-- button-fun -->
-		<div style="/*float: right; */padding: 5px; margin-top: 50px;">
+		<div style="/*float: right; */padding: 5px; margin-top: 0px;">
 
 <!-- welcome-alert -->
 			<button onclick="wwFunction()" style="padding: 1px">问你个事</button>
@@ -215,14 +235,92 @@
 						timedCount();
 					}
 				}
+				function stopCount(){
+					clearTimeout(t);
+					timer_is_on=0;
+				}
 			</script>
 			<form>
 				<input type="button" value="点我把" onClick="doTimer()">
 				<input type="text" id="txt">
+				<input type="button" value="不给了" onClick="stopCount()">
 			</form>
 			<p style="color: #FFF">RMB给zx</p>
-<!-- counting-end -->	
+<!-- counting-end -->
 
+<!-- if-else -->
+			<script>
+				var d = new Date();
+				var time = d.getHours();
+				if (time < 10){
+					document.write("<p>Good morning<p>");
+				}
+				else if (time >= 10 && time < 18){
+					document.write("<p>Good afternoon<p>");
+				}
+				else{
+					document.write("<p>Good evening<p>")
+				}
+			</script>
+<!-- if-else-end -->
+
+<!-- get-day -->
+			<button onclick="wkFunction()" style="padding: 1px">What day is today?</button>
+			<p id="weekday" style="color: #FFF"></p>
+			<script>
+			function wkFunction(){
+				var s;
+				var w = new Date().getDay();
+				switch (w){
+					case 0: s="Sunday";
+					break;
+					case 1: s="Monday";
+					break;
+					case 2: s="Tuesday";
+					break;
+					case 3: s="Wednesday";
+					break;
+					case 4: s="Thursday";
+					break;
+					case 5: s="Friday";
+					break;
+					case 6: s="Saturday";
+					break;
+				}
+				document.getElementById("weekday").innerHTML=s;
+			}
+			</script>
+<!-- get-day-end -->
+
+
+
+<!-- rete -->
+			<p style="color: #FFF">我在你心里排第几?</p>
+			<input id="rate-me" type="text">
+			<button type="button-fun" onclick="raFunction()" style="padding: 1px">确定</button>
+			<p id="message" style="color: #FFF"></p>
+
+			<script>
+			function raFunction(){
+				var message, r;
+				message = document.getElementById("message");
+				message.innerHTML="";
+				x = document.getElementById("rate-me").value;
+				try {
+					if(x == "") throw "你说啥"
+					if(isNaN(x)) throw "写数字呀"
+					x = Number(x);
+					if(x == "0") throw "心里只有我？"
+					if(x == "1") throw "乖崽"
+					if(x >= 2 && x <= 5) throw "我不是唯一的宝宝吗qwq"
+					if(x > 5) throw "数得真仔细呢，好走不送"
+				}
+				catch(err) {
+					message.innerHTML=err;
+				}
+			}
+			</script>
+<!-- rate-end -->
 
 		</div><!-- button-fun-end -->
 
